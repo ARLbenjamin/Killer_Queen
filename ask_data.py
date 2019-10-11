@@ -4,7 +4,7 @@ def rule_of_data():
     print('-> Data only can be positive integers over 0, except the quantity of obstacles (it can be 0).')
     print('-> The limit value of board is 10^5 squares in each side(row and column).')
     print('-> You can´t put a obstacle in the position´s queen.')
-    print('-> The obstacles number can´t be bigger than board´s squares.')
+    print('-> A single cell may contain more than one obstacle.')
     print('-> Queen´s position and obstacles´ position cannot put in out of board´s dimensions.')
     print('-> The correct way for introduce two elements is separate these only with one space and not begin the first number with a space.')
     
@@ -53,7 +53,7 @@ def ask_board_obstacle():
     B_O = input('PLease, introduce the dimesion of board (first value, rows = columns) and the number of obstacles (second value), separate the data with a space: ')
     b_o = confirm_data(B_O)
     try:
-        if b_o[0] > 1000000 or b_o[0] <= 0 or b_o[1] > (b_o[0] * b_o[0]) or b_o[1] < 0 :
+        if b_o[0] > 1000000 or b_o[0] <= 0 or b_o[1] < 0 :
             b_o = False
     except TypeError:
         b_o = confirm_data(B_O)
@@ -64,7 +64,7 @@ def ask_board_obstacle():
         B_O = input('PLease, introduce the dimesion of board (first value, rows = columns) and the number of obstacles (second value), separate the data with a space: ')
         b_o = confirm_data(B_O)
         try:
-            if b_o[0] > 1000000 or b_o[0] <= 0 or b_o[1] > (b_o[0] * b_o[0]) or b_o[1] < 0 :
+            if b_o[0] > 1000000 or b_o[0] <= 0 or b_o[1] < 0 :
                  b_o = False
         except TypeError:
             b_o = confirm_data(B_O)
