@@ -1,12 +1,12 @@
 def rule_of_data():
     print('      ')
     print('!! Considerate the next rules when you tried to introduce the data:')
+    print('-> Data only can be positive integers over 0, except the quantity of obstacles (it can be 0).')
     print('-> The limit value of board is 10^5 squares in each side(row and column).')
     print('-> You can´t put a obstacle in the position´s queen.')
-    print('-> Number of obstacles can´t be bigger than board´s squares.')
+    print('-> The obstacles number can´t be bigger than board´s squares.')
     print('-> Queen´s position and obstacles´ position cannot put in out of board´s dimensions.')
-    print('-> Data only can be integers, except 0.')
-    print('-> The correct way to introduce two elements is separate these only with one space and not begin the first number with a space.')
+    print('-> The correct way for introduce two elements is separate these only with one space and not begin the first number with a space.')
     
 def confirm_data(data):
     B = list(data)
