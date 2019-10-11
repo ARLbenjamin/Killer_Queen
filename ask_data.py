@@ -53,7 +53,7 @@ def ask_board_obstacle():
     B_O = input('PLease, introduce the dimesion of board (first value, rows = columns) and the number of obstacles (second value), separate the data with a space: ')
     b_o = confirm_data(B_O)
     try:
-        if b_o[0] > 1000000 or b_o[0] == 0 or b_o[1] > (b_o[0] * b_o[0]) :
+        if b_o[0] > 1000000 or b_o[0] <= 0 or b_o[1] > (b_o[0] * b_o[0]) or b_o[1] < 0 :
             b_o = False
     except TypeError:
         b_o = confirm_data(B_O)
@@ -64,7 +64,7 @@ def ask_board_obstacle():
         B_O = input('PLease, introduce the dimesion of board (first value, rows = columns) and the number of obstacles (second value), separate the data with a space: ')
         b_o = confirm_data(B_O)
         try:
-            if b_o[0] > 1000000 or b_o[0] == 0 or b_o[1] > (b_o[0] * b_o[0]) :
+            if b_o[0] > 1000000 or b_o[0] <= 0 or b_o[1] > (b_o[0] * b_o[0]) or b_o[1] < 0 :
                  b_o = False
         except TypeError:
             b_o = confirm_data(B_O)
@@ -75,7 +75,7 @@ def ask_queen_position(board):
     Rq_Cq = input('PLease, introduce the queen´s position (frist value: row, second value: column): ')
     rq_cq = confirm_data(Rq_Cq)
     try:
-        if rq_cq[0] > board or rq_cq[1] > board or rq_cq[0] == 0 or rq_cq[1] == 0 :
+        if rq_cq[0] > board or rq_cq[1] > board or rq_cq[0] <= 0 or rq_cq[1] <= 0 :
             rq_cq = False
     except TypeError:
         rq_cq = confirm_data(Rq_Cq)
@@ -86,7 +86,7 @@ def ask_queen_position(board):
         Rq_Cq = input('PLease, introduce the queen´s position (frist value: row, second value: column): ')
         rq_cq = confirm_data(Rq_Cq)
         try:
-            if rq_cq[0] > board or rq_cq[1] > board or rq_cq[0] == 0 or rq_cq[1] == 0 :
+            if rq_cq[0] > board or rq_cq[1] > board or rq_cq[0] <= 0 or rq_cq[1] <= 0 :
                  rq_cq = False
         except TypeError:
              rq_cq = confirm_data(Rq_Cq)
@@ -100,7 +100,7 @@ def obstacles(n_ob, q_p, board):
         obs = input(f'Introduce the obstacle number {i+1} (frist value: row, second value: column)')
         data = confirm_data(obs)
         try:
-            if data[0] > board or data[1] > board or data[0] == 0 or data[1] == 0 or data == q_p :
+            if data[0] > board or data[1] > board or data[0] <= 0 or data[1] <= 0 or data == q_p :
                 data = False
         except TypeError:
             data = confirm_data(obs)
@@ -111,7 +111,7 @@ def obstacles(n_ob, q_p, board):
             obs = input(f'Introduce the obstacle number {i+1} (frist value: row, second value: column): ')
             data = confirm_data(obs)
             try:
-                if data[0] > board or data[1] > board or data[0] == 0 or data[1] == 0 or data == q_p:
+                if data[0] > board or data[1] > board or data[0] <= 0 or data[1] <= 0 or data == q_p :
                     data = False
             except TypeError:
                 data = confirm_data(obs)
